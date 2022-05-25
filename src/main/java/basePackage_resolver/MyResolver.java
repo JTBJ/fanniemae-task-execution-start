@@ -3,6 +3,7 @@ package basePackage_resolver;
 import java.util.Arrays;
 import java.util.List;
 
+import com.amazonaws.services.ecs.AmazonECSClient;
 import com.amazonaws.services.ecs.model.AwsVpcConfiguration;
 import com.amazonaws.services.ecs.model.ContainerOverride;
 import com.amazonaws.services.ecs.model.ListTaskDefinitionFamiliesRequest;
@@ -14,7 +15,7 @@ import com.amazonaws.services.ecs.model.TaskOverride;
 
 public class MyResolver {
 
-	private RunTaskResult client;
+	private AmazonECSClient client;
 
 	public void someMethod() {
 		

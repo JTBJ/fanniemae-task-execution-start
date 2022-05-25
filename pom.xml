@@ -6,11 +6,35 @@
 	<name>dependency-resolver</name>
 	<description>Dependency resolver</description>
 
+	<properties>
+		<java.version>11</java.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-ecs</artifactId>
 			<version>1.12.227</version>
 		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.11.1000</version>
+		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<target>${java.version}</target>
+					<source>${java.version}</source>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
